@@ -7,4 +7,9 @@ class Store < ApplicationRecord
     end 
 
     # database relation
+    has_many :books
+
+    validate :name_store 
+    validate :desc 
+    validate :call_number
 end

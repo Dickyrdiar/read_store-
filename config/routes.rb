@@ -12,8 +12,9 @@ Rails.application.routes.draw do
     resources :checkouts, only: [:create]
 
     namespace :v1 do 
-      resources :books 
-      resources :stores
+      resources :stores do
+        resources :books 
+      end 
 
       resources :cart, only: [:show] do
         put 'add/:book_id', to: 'carts#add', as: :add_to 

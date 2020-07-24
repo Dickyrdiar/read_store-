@@ -1,5 +1,6 @@
 class Api::V1::StoresController < ApplicationController
     before_action :set_store, only: [:show, :edit, :update, :destroy]
+    before_action :authenticate_user!
 
     def index 
         @stores = Store.all 
