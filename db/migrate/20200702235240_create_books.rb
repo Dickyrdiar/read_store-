@@ -6,8 +6,9 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.string :name_book
       t.text :desc 
       t.string :date_of_issue 
-      t.string :page
-      t.string :ISBN
+      t.decimal :page
+      t.decimal :ISBN
+      t.decimal :price, precision: 8, scale: 2, null: false
 
       t.timestamps
     end

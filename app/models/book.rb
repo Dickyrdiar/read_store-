@@ -11,15 +11,8 @@ class Book < ApplicationRecord
     validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
     # database relation 
-    belongs_to :store
-    belongs_to :user
+    belongs_to :user, optional: true
+    belongs_to :store, optional: true 
+    has_many :reviews    
 
-    # add_cart  
-    def cart_action(current_user_id)
-        if $redis.sismember "cart#{current_user_id}", id 
-            "Remove from"
-        else  
-            "Add to"
-        end 
-    end 
 end

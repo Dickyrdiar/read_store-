@@ -13,7 +13,8 @@ gem 'puma', '~> 4.1'
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
-gem 'hiredis'
+gem 'gon'
+# gem 'hiredis'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
@@ -32,8 +33,7 @@ gem 'jwt'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 # payment rails
-gem 'stripe'
-
+gem 'braintree', '~> 2.103'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'

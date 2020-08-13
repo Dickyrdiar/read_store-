@@ -106,6 +106,8 @@ GEM
     bcrypt (3.1.13)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
+    braintree (2.103.0)
+      builder (>= 2.0.0)
     builder (3.2.4)
     byebug (11.1.3)
     climate_control (0.2.0)
@@ -128,8 +130,12 @@ GEM
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gon (6.3.2)
+      actionpack (>= 3.0.20)
+      i18n (>= 0.7)
+      multi_json
+      request_store (>= 1.0)
     hashie (4.1.0)
-    hiredis (0.6.3)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
     jwt (2.2.1)
@@ -220,6 +226,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.2.1)
+    request_store (1.5.0)
+      rack (>= 1.4)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -238,7 +246,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stripe (5.20.0)
     terrapin (0.6.0)
       climate_control (>= 0.0.3, < 1.0)
     thor (1.0.1)
@@ -259,10 +266,11 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
+  braintree (~> 2.103)
   byebug
   devise
   dotenv-rails
-  hiredis
+  gon
   jwt
   listen (~> 3.2)
   mysql2 (>= 0.4.4)
@@ -281,7 +289,6 @@ DEPENDENCIES
   simple_token_authentication
   spring
   spring-watcher-listen (~> 2.0.0)
-  stripe
   tzinfo-data
   uuidtools
 

@@ -1,6 +1,5 @@
 module Devise  
     module Strategies
-        def authenticate!
             class JWTAuthentication < Base
                 def authenticate! 
                     token = get_token 
@@ -25,6 +24,5 @@ module Devise
                     request.headers['Authorization'] 
                 end 
             end 
-        end  
     end 
 end 

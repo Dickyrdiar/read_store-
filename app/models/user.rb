@@ -18,7 +18,10 @@ class User < ApplicationRecord
   has_many :books 
   has_many :stores
 
+  has_many :reviews
+
   # validates model  
   validate :email 
   validate :password
+
 end

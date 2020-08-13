@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_04_145151) do
+ActiveRecord::Schema.define(version: 2020_08_13_004649) do
 
   create_table "books", id: :binary, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name_book"
     t.text "desc"
     t.string "date_of_issue"
-    t.string "page"
-    t.string "ISBN"
+    t.decimal "page", precision: 10
+    t.decimal "ISBN", precision: 10
+    t.decimal "price", precision: 8, scale: 2, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image_file_name"
@@ -25,6 +26,14 @@ ActiveRecord::Schema.define(version: 2020_08_04_145151) do
     t.bigint "image_file_size"
     t.datetime "image_updated_at"
     t.integer "user_id"
+  end
+
+  create_table "orders", id: :binary, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "user_id"
+    t.integer "total"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
