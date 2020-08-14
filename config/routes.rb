@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   devise_for :users, controllers: { omniaut_callbacks: 'omniauth_callbacks' }
   
   namespace :api, default: { format: :json } do
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
       resources :reset_passwords, only: [:index, :create]
     end     
 
-    
+    resources :transactions
 
     namespace :v1 do 
       resources :stores

@@ -120,7 +120,7 @@ Devise.setup do |config|
   #
   # Limiting the stretches to just one in testing will increase the performance of
   # your test suite dramatically. However, it is STRONGLY RECOMMENDED to not use
-  # a value less than 10 in other environments. Note that, for bcrypt (the default
+  # a value less than 10 in other environments. Note that, for bcconvig_navigationa_rypt (the default
   # algorithm), the cost increases exponentially with the number of stretches (e.g.
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
   config.stretches = Rails.env.test? ? 1 : 12
@@ -263,7 +263,7 @@ Devise.setup do |config|
   # should add them to the navigational formats lists.
   #
   # The "*/*" below is required to match Internet Explorer requests.
-  # config.navigational_formats = ['*/*', :html]
+  config.navigational_formats = [:json]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
@@ -271,7 +271,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  # config.omniauth :google_oauth2, '175520201832-ooccau4qhk7m643uvtpn9nhpnkbr871q.apps.googleusercontent.com', 'ADlWW1s8grrd0DMRU9f2z6XP', {}
+  config.omniauth :google_oauth2, '175520201832-ooccau4qhk7m643uvtpn9nhpnkbr871q.apps.googleusercontent.com', 'ADlWW1s8grrd0DMRU9f2z6XP', {}
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
