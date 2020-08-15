@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users, controllers: { omniaut_callbacks: 'omniauth_callbacks' }
   
+  
   namespace :api, default: { format: :json } do
     namespace :auth do 
       resources :users

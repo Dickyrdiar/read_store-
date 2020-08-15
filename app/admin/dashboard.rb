@@ -13,10 +13,10 @@ ActiveAdmin.register_page "Dashboard" do
     #
     # columns do
     #   column do
-    #     panel "Recent Posts" do
+    #     panel "Recent Book" do
     #       ul do
-    #         Post.recent(5).map do |post|
-    #           li link_to(post.title, admin_post_path(post))
+    #         Book.recent(5).map do |book|
+    #           li link_to(book.name_book, admin_book_path(book))
     #         end
     #       end
     #     end
