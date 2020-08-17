@@ -13,6 +13,8 @@ class Book < ApplicationRecord
     # database relation 
     belongs_to :user, optional: true
     belongs_to :store, optional: true 
-    has_many :reviews    
+    has_many :reviews   
+    
+    has_many :categories
 
 end

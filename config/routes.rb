@@ -24,6 +24,8 @@ Rails.application.routes.draw do
         put 'change/:book_id', to: 'carts#change', as: :change 
       end 
 
+      resources :categories
+
       resources :reviews, only: [:show, :create]
     end 
   end
