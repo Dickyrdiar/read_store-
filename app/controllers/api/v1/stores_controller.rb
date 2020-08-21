@@ -8,7 +8,7 @@ class Api::V1::StoresController < ApplicationController
     end 
 
     def create 
-        @store = Store.new(store_params)
+        @store = current_user.stores.build(store_params)
 
         if @store.save  
             render json: {
