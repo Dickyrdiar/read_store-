@@ -1,6 +1,6 @@
 class Api::V1::StoresController < ApplicationController
     before_action :set_store, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!
+    before_action :authenticate_user!, except: [:index]
 
     def index 
         @stores = Store.all 
@@ -32,6 +32,6 @@ class Api::V1::StoresController < ApplicationController
     end 
 
     def store_params
-        params.permit(:name_store, :desc, :call_number) 
+        params.permit(:name_store, :desc, :call_number, user_attributes: [:user_id] ) 
     end 
 end 

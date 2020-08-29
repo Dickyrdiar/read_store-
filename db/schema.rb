@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_08_15_170821) do
     t.string "date_of_issue"
     t.decimal "page", precision: 10
     t.decimal "ISBN", precision: 10
-    t.decimal "price", precision: 8, scale: 2, null: false
+    t.decimal "price", precision: 10
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image_file_name"

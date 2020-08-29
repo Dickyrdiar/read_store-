@@ -1,6 +1,6 @@
 class Api::V1::BooksController < ApplicationController
     before_action :set_book, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!
+    before_action :authenticate_user!, except: [:index]
 
     def index 
         @books = Book.all 
@@ -57,6 +57,6 @@ class Api::V1::BooksController < ApplicationController
     end 
 
     def book_params
-        params.permit(:uuid, :name_book, :desc, :date_of_issue, :page, :ISBN, :image, :price) 
+        params.permit(:uuid, :name_book, :desc, :date_of_issue, :page, :ISBN, :price, :image, user_attributes: [:user_id]) 
     end 
 end
