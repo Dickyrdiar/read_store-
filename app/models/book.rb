@@ -17,4 +17,6 @@ class Book < ApplicationRecord
     
     has_many :categories
 
+    # elastic 
+    include Searchable
 end

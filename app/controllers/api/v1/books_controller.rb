@@ -1,6 +1,6 @@
 class Api::V1::BooksController < ApplicationController
     before_action :set_book, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!, except: [:index]
+    before_action :authenticate_user!, except: [:index, :create]
 
     def index 
         @books = Book.all 
@@ -13,7 +13,7 @@ class Api::V1::BooksController < ApplicationController
     end 
 
     def create  
-        @book = current_user.books.build(book_params)
+        @book = Book.new(book_params)
 
         if @book.save  
             render json: {
