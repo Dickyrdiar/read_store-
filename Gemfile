@@ -32,8 +32,7 @@ gem 'paperclip'
 gem 'simple_token_authentication'
 gem 'jwt'
 
-gem 'elasticsearch-model'
-gem 'elasticsearch-rails'
+gem 'searchkick', '~> 4.4', '>= 4.4.1'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 # payment rails
