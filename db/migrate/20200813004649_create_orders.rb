@@ -9,5 +9,6 @@ class CreateOrders < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    add_index :orders, [:book_id, :user_id]
   end
 end
