@@ -36,6 +36,7 @@ gem 'searchkick', '~> 4.4', '>= 4.4.1'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 # payment rails
+gem 'activemerchant'
 gem 'braintree', '~> 2.103'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible

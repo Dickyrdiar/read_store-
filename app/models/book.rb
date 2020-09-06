@@ -20,4 +20,11 @@ class Book < ApplicationRecord
     #  seacrhkick
     searchkick 
 
+    # def data_search
+    #     {
+    #         name_book: name_book, 
+    #         author: author
+    #     } 
+    # end 
+
 end
