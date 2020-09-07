@@ -18,5 +18,13 @@ ActiveAdmin.register_page "Dashboard" do
       end   
     end 
 
+    panel "All user" do 
+      ul do
+        User.all.map do |user|
+          li user.username 
+        end  
+      end 
+    end 
+
   end # content
 end
