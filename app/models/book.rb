@@ -17,14 +17,6 @@ class Book < ApplicationRecord
     
     has_many :categories
 
-    #  seacrhkick
-    searchkick 
-
-    # def data_search
-    #     {
-    #         name_book: name_book, 
-    #         author: author
-    #     } 
-    # end 
+   
 
 end

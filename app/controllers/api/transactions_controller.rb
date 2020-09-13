@@ -12,7 +12,7 @@ class Api::TransactionsController < ApplicationController
 
     def create
         @result = Braintree::Transaction.payment(
-            amount: current_user.cart_total.price
+            amount: current_user.cart_total.price,
             payment_method_nonce: params[:payment_method_nonce]
         )
 

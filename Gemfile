@@ -17,7 +17,8 @@ gem 'gon'
 # gem 'hiredis'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-gem 'activeadmin'
+gem 'rails_admin', github: 'sferik/rails_admin'
+gem 'rails_admin_rollincode', '~> 1.0'
 
 
 # Use Active Storage variant
