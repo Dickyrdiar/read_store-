@@ -26,8 +26,6 @@ ActiveRecord::Schema.define(version: 2020_09_14_003743) do
     t.bigint "image_file_size"
     t.datetime "image_updated_at"
     t.integer "user_id"
-    t.bigint "category_id"
-    t.index ["category_id"], name: "index_books_on_category_id"
   end
 
   create_table "categories", id: :binary, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|

@@ -1,15 +1,13 @@
 class Api::V1::BooksController < ApplicationController
     before_action :set_book, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!, except: [:index, :create]
+    before_action :authenticate_user!, except: [:index, :show]
 
     def index 
         @books = Book.all 
         render json: @books 
     end 
 
-    def show
-        @book = Book.find(params[:id])
-        @cart_action = @book.cart_action cureent_user.try :id 
+    def show 
     end 
 
     def create  

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  # devise_for :admin, path_names: {
+  #   sign_in: 'login', sign_out: 'logout', sign_up: 'signup'
+  # }
+
   devise_for :users, controllers: { omniaut_callbacks: 'omniauth_callbacks' }
   
   
