@@ -1,6 +1,6 @@
 class Api::V1::StoresController < ApplicationController
     before_action :set_store, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!, except: [:index]
+    before_action :authenticate_user!, except: [:index, :create]
 
     def index 
         @stores = Store.all 
@@ -9,6 +9,7 @@ class Api::V1::StoresController < ApplicationController
 
     def create 
         @store = current_user.stores.new(store_params)
+        @store = Store.new(store_params)
 
         if @store.save  
             render json: {
