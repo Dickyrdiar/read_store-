@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_14_003743) do
+ActiveRecord::Schema.define(version: 2020_09_18_142556) do
 
   create_table "books", id: :binary, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name_book"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_09_14_003743) do
     t.bigint "image_file_size"
     t.datetime "image_updated_at"
     t.integer "user_id"
+    t.string "author"
   end
 
   create_table "categories", id: :binary, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -56,6 +57,10 @@ ActiveRecord::Schema.define(version: 2020_09_14_003743) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.bigint "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", id: :binary, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -70,6 +75,8 @@ ActiveRecord::Schema.define(version: 2020_09_14_003743) do
     t.string "username"
     t.string "provider"
     t.string "uid"
+    t.string "author"
+    t.string "authro"
     t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

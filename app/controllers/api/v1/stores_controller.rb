@@ -33,6 +33,6 @@ class Api::V1::StoresController < ApplicationController
     end 
 
     def store_params
-        params.permit(:name_store, :desc, :call_number, user_attributes: [:user_id] ) 
+        params.permit(:name_store, :desc, :call_number, :image, user_attributes: [:user_id] ) 
     end 
 end 

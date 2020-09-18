@@ -13,7 +13,7 @@ class Api::Auth::UsersController < ApplicationController
             session[:user_id] = @user.id 
             render json: @user 
         else
-            render json: @user.error
+            render json: @user.errors
         end 
     end 
 

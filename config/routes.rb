@@ -11,9 +11,10 @@ Rails.application.routes.draw do
   namespace :api, default: { format: :json } do
     namespace :auth do 
       resources :users
-      resources :sessions, only: %i[create destroy]
+      post 'password/forgot', to: 'password#forgot'
+      post 'password/reset', to: 'password#reset'
 
-      resources :reset_passwords, only: [:index, :create]
+      resources :sessions, only: %i[create destroy]
     end     
 
     resources :transactions

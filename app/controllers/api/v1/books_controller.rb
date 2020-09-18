@@ -8,7 +8,7 @@ class Api::V1::BooksController < ApplicationController
     end 
 
     def show 
-        @book = Book.find(params[:id])
+        
     end 
 
     def create  
@@ -57,6 +57,6 @@ class Api::V1::BooksController < ApplicationController
     end 
 
     def book_params
-        params.permit(:uuid, :name_book, :desc, :date_of_issue, :page, :ISBN, :price, :image, user_attributes: [:user_id]) 
+        params.permit(:uuid, :name_book, :author, :desc, :date_of_issue, :page, :ISBN, :price, :image, user_attributes: [:user_id]) 
     end 
 end
