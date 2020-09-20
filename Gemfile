@@ -34,7 +34,7 @@ gem 'simple_token_authentication'
 gem 'jwt'
 
 gem 'searchkick', '~> 4.4', '>= 4.4.1'
-
+gem 'cancancan'
 gem 'dotenv-rails', :groups => [:development, :test]
 # payment rails
 gem 'activemerchant'
