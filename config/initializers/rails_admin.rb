@@ -1,9 +1,5 @@
 RailsAdmin.config do |config|
 
-  config.authorize_with do |controller|
-    redirect_to main_app.root_path unless_user.try(:admin?) 
-  end 
-
   ### Popular gems integration
 
   ## == Devise ==
@@ -13,7 +9,7 @@ RailsAdmin.config do |config|
   # config.current_user_method(&:current_admin)
 
   ## == CancanCan ==
-  config.authorize_with :cancancan
+  # config.authorize_with :cancancan
 
   ## == Pundit ==
   # config.authorize_with :pundit

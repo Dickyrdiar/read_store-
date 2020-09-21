@@ -20,6 +20,7 @@ class User < ApplicationRecord
 
   has_many :reviews
 
+  has_many :launches
   # validates model  
   validate :email 
   validate :password

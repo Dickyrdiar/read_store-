@@ -8,6 +8,7 @@ class Store < ApplicationRecord
 
     # database relation
     has_many :books
+    has_many :launches
 
     validate :name_store 
     validate :desc 
