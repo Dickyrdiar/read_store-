@@ -6,7 +6,27 @@ class Api::V1::LaunchesController < ApplicationController
     end 
 
     def create  
+        @launch = Launch.new(launch_params)
+        @user = current_user.new  
+
+        if @launch.save  
+            render json: {
+                messages: 'launch book ready', 
+                is_messages: true , 
+                data: { launch: @launch }
+            }, status: :ok
+        else
+            render json: {
+                messages: 'lauch not ready', 
+                is_messages: false, 
+                data: {},
+            }, status: :failed
+        end 
     end     
+
+    def destroy  
+        @launch.destroy 
+    end 
 
     private  
 

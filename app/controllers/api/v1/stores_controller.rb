@@ -7,6 +7,9 @@ class Api::V1::StoresController < ApplicationController
         render json: @stores 
     end 
 
+    def show 
+    end 
+
     def create 
         @store = current_user.stores.new(store_params)
         @store = Store.new(store_params)

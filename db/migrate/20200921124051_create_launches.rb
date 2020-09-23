@@ -11,6 +11,7 @@ class CreateLaunches < ActiveRecord::Migration[6.0]
       t.decimal :ISBN
       t.decimal :price
       t.attachment :image
+      t.string :timer
 
       t.timestamps
     end

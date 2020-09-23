@@ -6,6 +6,6 @@ class Launch < ApplicationRecord
     end 
 
     has_many :books
-    belongs_to :user
-    belongs_to :store
+    belongs_to :user, optional: true 
+    belongs_to :store, optional: true 
 end

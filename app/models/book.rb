@@ -18,5 +18,5 @@ class Book < ApplicationRecord
     has_many :categories
 
    
-    belongs_to :launch
+    belongs_to :launch, optional: true 
 end
