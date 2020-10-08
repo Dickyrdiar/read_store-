@@ -14,6 +14,7 @@ class Api::TransactionsController < ApplicationController
         @result = Braintree::Transaction.payment(
             amount: current_user.cart_total.price,
             payment_method_nonce: params[:payment_method_nonce]
+            @result.user_id = session[:user_id]
         )
 
         if @payment.sucess 

@@ -16,7 +16,7 @@ class Book < ApplicationRecord
     has_many :reviews   
     
     has_many :categories
-
+    has_many :line_books, dependent: :destroy
    
     belongs_to :launch, optional: true 
 end

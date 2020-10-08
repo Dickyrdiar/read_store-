@@ -9,6 +9,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.decimal :page
       t.decimal :ISBN
       t.decimal :price
+      t.decimal :number_of_copies
 
       t.timestamps
     end
