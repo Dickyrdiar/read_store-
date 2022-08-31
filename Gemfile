@@ -45,7 +45,7 @@ gem 'braintree', '~> 2.103'
 gem 'rack-cors'
 
 group :development, :auth do
-  gem 'omniauth', '~> 1.9', '>= 1.9.1'
+  gem 'omniauth', '~> 1.9'
   gem 'omniauth-google-oauth2', '~> 0.8.0'
 end
 
